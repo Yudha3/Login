@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextBasis</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
+    
+    
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1 class="logo">Next<span>Basis</span></h1>
+            <i class="fa fa-chevron-left menu-icon"></i>
+            <ul class="sidenav">
+                <li class="active">
+                    <i class="fa fa-home"></i>
+                    <a href="index.html"> Beranda
+                        <!-- <span class="span1"><i class="fa fa-angle-right"></i></span> -->
+                    </a>
+                </li>
+                <li>
+                    <i class="fa fa-file-text"></i>
+                    <a href="#"> Cuti</a>
+                    <span class="span1"><i class="fa fa-angle-right"></i></span>
+                </li>
+                <ul class="dropdown">
+                    <li><a href="PengajuanCuti.html"><span class="dot1"></span> Pengajuan Cuti</a></li>
+                    <li><a href="ApprovalCuti.html"><span class="dot1"></span> Persetujuan Cuti</a></li>
+                </ul>
+                <!-- <p class="app">App Ans Pages</p> -->
+                <li>
+                    <i class="fa fa-plane"></i>
+                    <a href="#"> Perjalanan Dinas</a>
+                    <span class="span2"><i class="fa fa-angle-right"></i></span>
+                </li>
+                <ul class="dropdown1">
+                    <li><a href="Dinas.html"><span class="dot2"></span> Dinas</a></li>
+                    <li><a href="#"><span class="dot2"></span> Laporan</a></li>
+                </ul>
+                <li>
+                    <i class="fa fa-users"></i>
+                    <a href="#"> Karyawan</a>
+                    <span class="span3"><i class="fa fa-angle-right"></i></span>
+                </li>
+                <ul class="dropdown2">
+                    <li><a href="Karyawan.html"><span class="dot3"></span> Daftar Karyawan</a></li>
+                    <li><a href="Kontrak.html"><span class="dot3"></span> Kontrak Kerja</a></li>
+                </ul>
+                <li>
+                    <i class="fa fa-building"></i>
+                    <a href="Mitra.html"> Mitra Perusahaan</a>
+                </li>
+                <li>
+                    <i class="fa fa-folder-open"></i>
+                    <a href="#"> Data Perusahaan</a>
+                    <span class="span4"><i class="fa fa-angle-right"></i></span>
+                </li>
+                <ul class="dropdown3">
+                    <li><a href="#"><span class="dot4"></span> Inventaris</a></li>
+                    <li><a href="#"><span class="dot4"></span> Router</a></li>
+                </ul>
+                <li>
+                    <i class="fa fa-key"></i>
+                    <a href="#"> Privilege</a>
+                </li>
+                <!-- <li>
+                    <i class="fa fa-users"></i>
+                    <a href="#"> Karyawan</a>
+                    <span class="span3"><i class="fa fa-sign-out"></i></span>
+                </li> -->
+            </ul>
+        </div>
+        
+        <div class="main">
+            <div class="main-top">
+                <h1>Home</h1>
+            </div>
+            <div class="search">
+                <i class="fa fa-search"></i>
+                <input type="text" name="" class="input1" placeholder="Search">
+            </div>
+            <div class="cong-box">
+                
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".span1").click(function () {
+                $(".dropdown").slideToggle(500);
+            });
+        });
+
+        $(document).ready(function () {
+            $(".span2").click(function () {
+                $(".dropdown1").slideToggle(500);
+            });
+        });
+
+        $(document).ready(function () {
+            $(".span3").click(function () {
+                $(".dropdown2").slideToggle(500);
+            });
+        });
+
+        $(document).ready(function () {
+            $(".span4").click(function () {
+                $(".dropdown3").slideToggle(500);
+            });
+        });
+
+        $('.sidenav li').click(function () {
+            $('.sidenav li').removeClass("active");
+            $(this).addClass("active");
+        });
+
+        $('.filter div').click(function () {
+            $('.filter div').removeClass("active2");
+            $(this).addClass("active2");
+        });
+
+        $('.filterx li').click(function () {
+            $('.filterx li').removeClass("activev");
+            $(this).addClass("activev");
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(".menu-icon").click(function (e) {
+            e.preventDefault();
+            $(".menu-icon").toggleClass("menuicon");
+            $(".main").toggleClass("main-width");
+            $(".sidebar").toggleClass("active1");
+            $(".sidenav li a").toggleClass("anchor");
+            $(".sidenav li").toggleClass("lislide");
+            $(".sidenav p").toggleClass("apphide");
+            $(".logo span").toggleClass("headspan");
+            $(".logo").toggleClass("lm");
+
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(".user").click(function () {
+                $(".profile-div").toggle(1000);
+            });
+            $(".bell").click(function () {
+                $(".notification-div").toggle(1000);
+            });
+        });
+    </script>
+</body>
+</html>
