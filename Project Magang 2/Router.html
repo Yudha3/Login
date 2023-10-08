@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextBasis</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1 class="logo">Next<span>Basis</span></h1>
+            <i class="fa fa-chevron-left menu-icon"></i>
+            <ul class="sidenav">
+                <li>
+                    <i class="fa fa-home"></i>
+                    <a href="index.html"> Beranda
+                    </a>
+                </li>
+                <li>
+                    <i class="fa fa-file-text"></i>
+                    <a href="PengajuanCuti.html"> Cuti</a>
+                    <!-- <span class="span1"><i class="fa fa-angle-right"></i></span> -->
+                </li>
+                <!-- <ul class="dropdown">
+                    <li><a href="PengajuanCuti.html"><span class="dot1"></span> Pengajuan Cuti</a></li>
+                    <li><a href="ApprovalCuti.html"><span class="dot1"></span> Persetujuan Cuti</a></li>
+                </ul> -->
+                <li>
+                    <i class="fa fa-plane"></i>
+                    <a href="Dinas.html"> Perjalanan Dinas</a>
+                    <!-- <span class="span2"><i class="fa fa-angle-right"></i></span> -->
+                </li>
+                <!-- <ul class="dropdown1">
+                    <li><a href="Dinas.html"><span class="dot2"></span> Dinas</a></li>
+                    <li><a href="#"><span class="dot2"></span> Laporan</a></li>
+                </ul> -->
+                <li>
+                    <i class="fa fa-users"></i>
+                    <a href="Karyawan.html"> Karyawan</a>
+                    <!-- <span class="span3"><i class="fa fa-angle-right"></i></span> -->
+                </li>
+                <!-- <ul class="dropdown2">
+                    <li><a href="Karyawan.html"><span class="dot3"></span> Daftar Karyawan</a></li>
+                    <li><a href="Kontrak.html"><span class="dot3"></span> Kontrak Kerja</a></li>
+                </ul> -->
+                <li>
+                    <i class="fa fa-building"></i>
+                    <a href="Mitra.html"> Mitra Perusahaan</a>
+                </li>
+                <li class="active">
+                    <i class="fa fa-folder-open"></i>
+                    <a href="#"> Data Perusahaan</a>
+                    <span class="span4"><i class="fa fa-angle-right"></i></span>
+                </li>
+                <ul class="dropdown3">
+                    <li><a href="Inventaris.html"><span class="dot4"></span> Inventaris</a></li>
+                    <li><a href="Router.html"><span class="dot4"></span> Router</a></li>
+                </ul>
+                <li>
+                    <i class="fa fa-key"></i>
+                    <a href="#"> Privilege</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="main">
+            <div class="main-top">
+                <h1>Router</h1>
+            </div>
+            <div class="view">
+                <div class="search">
+                    <i class="fa fa-search"></i>
+                    <input type="text" name="" class="input1" placeholder="Search">
+                </div>
+                <div class="plus">
+                    <i class="fa fa-plus"></i>
+                    <a href="TambahRouter.html">Tambah Router</a>
+                </div>
+            </div>
+    
+            <div class="cong-box">
+                <div>
+                    <table  class="box" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>MAC Address</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- @forelse ($items as $item) -->
+                            <tr>
+                                <td>1</td>
+                                <td>00:1B:44:11:3A:B7</td>
+                                <td>
+                                    <a href="TambahKontrak.html" class="btn btn-danger">
+                                        <i class="btn1 fa fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-danger">
+                                        <i class="btn3 fa fa-pencil"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-danger">
+                                        <i class="btn2 fa fa-trash"></i>
+                                    </a>
+                                    <!-- <form action="#" method="POST" class="d-inline">
+                                        @csrf
+                                        @method('delete')
+                                        <button class="btn btn-danger">
+                                            <i class="fa fa-times"></i>
+                                        </button>
+                                    </form> -->
+                                </td>
+                            </tr>
+                        <!-- @empty -->
+                            <!-- <tr>
+                                <td colspan="5" class="text-center">
+                                    <img src="img/1.png" alt="none">
+                                    <p>Tidak ada pengajuan cuti yang pending</p>
+                                </td>
+                            </tr> -->
+                        <!-- @endforelse -->
+                        </tbody>
+                    </table>
+                </div>
+                <!-- <div class="content">
+                    <table class="table table-bordered" width="100%" cellspacing="0">
+    
+                    </table>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".span1").click(function () {
+                $(".dropdown").slideToggle(500);
+            });
+        });
+
+        $(document).ready(function () {
+            $(".span2").click(function () {
+                $(".dropdown1").slideToggle(500);
+            });
+        });
+
+        $(document).ready(function () {
+            $(".span3").click(function () {
+                $(".dropdown2").slideToggle(500);
+            });
+        });
+
+        $(document).ready(function () {
+            $(".span4").click(function () {
+                $(".dropdown3").slideToggle(500);
+            });
+        });
+
+        $('.sidenav li').click(function () {
+            $('.sidenav li').removeClass("active");
+            $(this).addClass("active");
+        });
+
+        $('.filter div').click(function () {
+            $('.filter div').removeClass("active2");
+            $(this).addClass("active2");
+        });
+
+        $('.filterx li').click(function () {
+            $('.filterx li').removeClass("activev");
+            $(this).addClass("activev");
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(".menu-icon").click(function (e) {
+            e.preventDefault();
+            $(".menu-icon").toggleClass("menuicon");
+            $(".main").toggleClass("main-width");
+            $(".sidebar").toggleClass("active1");
+            $(".sidenav li a").toggleClass("anchor");
+            $(".sidenav li").toggleClass("lislide");
+            $(".sidenav p").toggleClass("apphide");
+            $(".logo span").toggleClass("headspan");
+            $(".logo").toggleClass("lm");
+
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(".user").click(function () {
+                $(".profile-div").toggle(1000);
+            });
+            $(".bell").click(function () {
+                $(".notification-div").toggle(1000);
+            });
+        });
+    </script>
+</body>
+</html>
