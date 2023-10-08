@@ -40,7 +40,7 @@
                     <li><a href="Dinas.html"><span class="dot2"></span> Dinas</a></li>
                     <li><a href="#"><span class="dot2"></span> Laporan</a></li>
                 </ul> -->
-                <li>
+                <li class="active">
                     <i class="fa fa-users"></i>
                     <a href="Karyawan.html"> Karyawan</a>
                     <!-- <span class="span3"><i class="fa fa-angle-right"></i></span> -->
@@ -49,7 +49,7 @@
                     <li><a href="Karyawan.html"><span class="dot3"></span> Daftar Karyawan</a></li>
                     <li><a href="Kontrak.html"><span class="dot3"></span> Kontrak Kerja</a></li>
                 </ul> -->
-                <li class="active">
+                <li>
                     <i class="fa fa-building"></i>
                     <a href="Mitra.html"> Mitra Perusahaan</a>
                 </li>
@@ -72,74 +72,74 @@
     
         <div class="main">
             <div class="main-top1">
-                <a href="Mitra.html"><i class="fa fa-angle-left"></i></a>
-                <h3>Tambah Mitra Perusahaan</h3>
+                <a href="Karyawan.html"><i class="fa fa-angle-left"></i></a>
+                <h3>Detail Karyawan</h3>
             </div>
+            <div class="filter">
+                <ul class="filterx">
+                    <li>
+                        <a href="DetailKaryawan.html">Profile</a>
+                    </li>
+                </ul>
+                <ul class="filterx">
+                    <li class="activev">
+                        <a href="DetailAbsensi.html">Absensi</a>
+                    </li>
+                </ul>
+                <ul class="filterx">
+                    <li>
+                        <a href="DetailGaji.html">Gaji</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="line4"></div>
             <div class="cong-box1">
-                <form action="#" method="post" enctype="multipart/form-data">
-                    <div class="content">
-                        <div class="tglx">
-                            <div class="tgl1">
-                                <h5>Nama Perusahaan</h5>
-                                <input type="text" name="" id="" class="date" placeholder="Tuliskan nama perusahaan, di sini">
-                            </div>
-                            <div class="tgl1">
-                                <h5>Provinsi</h5>
-                                <input type="text" name="" id="" class="date" placeholder="Tuliskan nama provinsi, di sini">
-                            </div>
-                        </div>
-                        <div class="tglx1">
-                            <div class="tgl1">
-                                <h5>Kabupaten / Kota</h5>
-                                <input type="text" name="" id="" class="date" placeholder="Tuliskan nama kabupaten atau kota, di sini">
-                            </div>
-                            <div class="tgl1">
-                                <h5>Kecamatan</h5>
-                                <input type="text" name="" id="" class="date" placeholder="Tuliskan nama kecamatan, di sini">
-                            </div>
-                        </div>
-                        <div class="tglx1">
-                            <div class="tgl1">
-                                <h5>Kelurahan</h5>
-                                <input type="text" name="" id="" class="date" placeholder="Tuliskan nama kelurahan, di sini">
-                            </div>
-                            <div class="tgl1">
-                                <h5>Kode Pos</h5>
-                                <input type="text" name="" id="" class="date" placeholder="Tuliskan kode pos, di sini">
-                            </div>
-                        </div>
-                        <div class="keter">
-                            <h5>Alamat Lengkap</h5>
-                            <textarea name="keterangan" id="keterangan" cols="122" rows="5" placeholder="Tuliskan alamat lengkap, di sini"></textarea>
-                            <!-- <input type="text" class="input2" placeholder="Tuliskan alamat perusahaan, di sini"> -->
-                        </div>
-                        <div class="tglx1">
-                            <div class="tgl1">
-                                <h5>PIC Perusahaan</h5>
-                                <input type="text" name="" id="" class="date" placeholder="Tuliskan PIC perusahaan, di sini">
-                            </div>
-                            <div class="tgl1">
-                                <h5>Jabatan PIC</h5>
-                                <input type="text" name="" id="" class="date" placeholder="Tuliskan jabatan PIC, di sini">
-                            </div>
-                        </div>
-                        <div class="tglx1">
-                            <div class="tgl1">
-                                <h5>Nomor PIC</h5>
-                                <input type="text" name="" id="" class="date" placeholder="Tuliskan nomor PIC, di sini">
-                            </div>
-                            <div class="tgl1">
-                                <h5>Komisi Perjalanan Dinas</h5>
-                                <input type="text" name="" id="" class="date" placeholder="Tuliskan komisi perjalanan dinas, di sini">
-                            </div>
-                        </div>
-                        <div class="button">
-                            <button type="submit" class="btny1x btn-primary btn-block">
-                                Tambah Mitra
-                            </button>
-                        </div>
-                    </div>
-                </form>
+                <div>
+                    <table  class="box" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Tanggal</th>
+                                <th>Jumlah Absensi</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- @forelse ($items as $item) -->
+                            <tr>
+                                <td>1</td>
+                                <td>Januari 2023</td>
+                                <td>25</td>
+                                <td>
+                                    <a href="#" class="btn btn-danger">
+                                        <i class="btn1 fa fa-eye"></i>
+                                    </a>
+                                    <!-- <a href="TambahKontrak.html" class="btn btn-danger">
+                                        <i class="btn3 fa fa-pencil"></i>
+                                    </a> -->
+                                    <!-- <a href="#" class="btn btn-danger">
+                                        <i class="btn2 fa fa-print"></i>
+                                    </a> -->
+                                    <!-- <form action="#" method="POST" class="d-inline">
+                                        @csrf
+                                        @method('delete')
+                                        <button class="btn btn-danger">
+                                            <i class="fa fa-times"></i>
+                                        </button>
+                                    </form> -->
+                                <!-- </td> -->
+                            </tr>
+                        <!-- @empty -->
+                            <!-- <tr>
+                                <td colspan="5" class="text-center">
+                                    <img src="img/1.png" alt="none">
+                                    <p>Tidak ada pengajuan cuti yang pending</p>
+                                </td>
+                            </tr> -->
+                        <!-- @endforelse -->
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>

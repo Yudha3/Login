@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
     <meta charset="UTF-8">
@@ -10,7 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
-
 <body>
     <div class="container">
         <div class="sidebar">
@@ -22,7 +20,7 @@
                     <a href="index.html"> Beranda
                     </a>
                 </li>
-                <li>
+                <li class="active">
                     <i class="fa fa-file-text"></i>
                     <a href="PengajuanCuti.html"> Cuti</a>
                     <!-- <span class="span1"><i class="fa fa-angle-right"></i></span> -->
@@ -49,7 +47,7 @@
                     <li><a href="Karyawan.html"><span class="dot3"></span> Daftar Karyawan</a></li>
                     <li><a href="Kontrak.html"><span class="dot3"></span> Kontrak Kerja</a></li>
                 </ul> -->
-                <li class="active">
+                <li>
                     <i class="fa fa-building"></i>
                     <a href="Mitra.html"> Mitra Perusahaan</a>
                 </li>
@@ -69,74 +67,39 @@
     
             </ul>
         </div>
-    
+        
         <div class="main">
             <div class="main-top1">
-                <a href="Mitra.html"><i class="fa fa-angle-left"></i></a>
-                <h3>Tambah Mitra Perusahaan</h3>
+                <a href="PengajuanCuti.html"><i class="fa fa-angle-left"></i></a>
+                <h3>Detail Cuti</h3>
             </div>
-            <div class="cong-box1">
+            <div class="cong-box">
                 <form action="#" method="post" enctype="multipart/form-data">
                     <div class="content">
-                        <div class="tglx">
-                            <div class="tgl1">
-                                <h5>Nama Perusahaan</h5>
-                                <input type="text" name="" id="" class="date" placeholder="Tuliskan nama perusahaan, di sini">
-                            </div>
-                            <div class="tgl1">
-                                <h5>Provinsi</h5>
-                                <input type="text" name="" id="" class="date" placeholder="Tuliskan nama provinsi, di sini">
-                            </div>
-                        </div>
-                        <div class="tglx1">
-                            <div class="tgl1">
-                                <h5>Kabupaten / Kota</h5>
-                                <input type="text" name="" id="" class="date" placeholder="Tuliskan nama kabupaten atau kota, di sini">
-                            </div>
-                            <div class="tgl1">
-                                <h5>Kecamatan</h5>
-                                <input type="text" name="" id="" class="date" placeholder="Tuliskan nama kecamatan, di sini">
-                            </div>
-                        </div>
-                        <div class="tglx1">
-                            <div class="tgl1">
-                                <h5>Kelurahan</h5>
-                                <input type="text" name="" id="" class="date" placeholder="Tuliskan nama kelurahan, di sini">
-                            </div>
-                            <div class="tgl1">
-                                <h5>Kode Pos</h5>
-                                <input type="text" name="" id="" class="date" placeholder="Tuliskan kode pos, di sini">
-                            </div>
+                        <h5>Cuti</h5>
+                        <div class="form-group">
+                            <select name="status" required class="form-control">
+                                <option value="">
+                                    Pilih Kategori Cuti
+                                </option>
+                                <option value="">Cuti Tahunan</option>
+                                <option value="">Cuti Kehamilan</option>
+                            </select>
                         </div>
                         <div class="keter">
-                            <h5>Alamat Lengkap</h5>
-                            <textarea name="keterangan" id="keterangan" cols="122" rows="5" placeholder="Tuliskan alamat lengkap, di sini"></textarea>
-                            <!-- <input type="text" class="input2" placeholder="Tuliskan alamat perusahaan, di sini"> -->
+                            <h5>Keterangan</h5>
+                            <textarea name="keterangan" id="keterangan" cols="122" rows="5" placeholder="Tuliskan Keterangan atau alasan mengambil cuti, di sini"></textarea>
+                            <!-- <input type="text" class="input2" placeholder="Tuliskan Keterangan atau alasan mengambil cuti, di sini"> -->
                         </div>
-                        <div class="tglx1">
+                        <div class="tgl">
                             <div class="tgl1">
-                                <h5>PIC Perusahaan</h5>
-                                <input type="text" name="" id="" class="date" placeholder="Tuliskan PIC perusahaan, di sini">
+                                <h5>Tanggal Mulai</h5>
+                                <input type="date" name="" id="" class="date">
                             </div>
                             <div class="tgl1">
-                                <h5>Jabatan PIC</h5>
-                                <input type="text" name="" id="" class="date" placeholder="Tuliskan jabatan PIC, di sini">
+                                <h5>Tanggal Selesai</h5>
+                                <input type="date" name="" id="" class="date">
                             </div>
-                        </div>
-                        <div class="tglx1">
-                            <div class="tgl1">
-                                <h5>Nomor PIC</h5>
-                                <input type="text" name="" id="" class="date" placeholder="Tuliskan nomor PIC, di sini">
-                            </div>
-                            <div class="tgl1">
-                                <h5>Komisi Perjalanan Dinas</h5>
-                                <input type="text" name="" id="" class="date" placeholder="Tuliskan komisi perjalanan dinas, di sini">
-                            </div>
-                        </div>
-                        <div class="button">
-                            <button type="submit" class="btny1x btn-primary btn-block">
-                                Tambah Mitra
-                            </button>
                         </div>
                     </div>
                 </form>
@@ -211,5 +174,4 @@
         });
     </script>
 </body>
-
 </html>
